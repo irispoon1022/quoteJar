@@ -9,6 +9,7 @@ const App = () => {
   const [showQuote, setShowQuote] = useState(false);
   const [randomQuote, setRandomQuote] = useState('');
   const [message, setMessage] = useState('');
+  const [loading, setLoading] = useState(false);
   const contractAddress = "0x395758376e3C439330053b0B6b27a976204EbeE5";
   const contractABI = abi.abi;
 
@@ -102,7 +103,7 @@ const App = () => {
         // listen for events
         wavePortalContract.on("NewMessage", (from, timestamp, message) => {
           console.log("NewMessage", from, timestamp, message);
-
+          setLoading(false);
           setAllWaves(prevState => [...prevState, {
             address: from,
             timestamp: new Date(timestamp * 1000),
@@ -127,6 +128,7 @@ const App = () => {
       const { ethereum } = window;
 
       if (ethereum) {
+        setLoading(true);
         const provider = new ethers.providers.Web3Provider(ethereum);
         const signer = provider.getSigner();
         const StoreContract = new ethers.Contract(contractAddress, contractABI, signer);
@@ -195,7 +197,7 @@ const handleShowRandomQuote = () => {
             Connect Wallet
           </button>
         )}
-
+        {loading && <div style={{ backgroundColor: "OldLace", marginTop: "8px", padding: "16px",opacity:"50%" }}> Your message is being packaged into an Ethereum block (usually takes 10s). Take a sip of drink and come back for the magic ~ </div>}
         {allWaves.map((wave, index) => {
           return (
             <div key={index} style={{ backgroundColor: "OldLace", marginTop: "8px", padding: "16px" }}>
