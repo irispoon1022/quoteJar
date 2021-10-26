@@ -1,0 +1,72 @@
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 64px;
+}
+
+.dataContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 600px;
+}
+
+.header {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.bio {
+  text-align: center;
+  color: gray;
+  margin-top: 16px;
+}
+
+.waveButton {
+  cursor: pointer;
+  margin-top: 16px;
+  padding: 8px;
+  border: 0;
+  border-radius: 5px;
+  background-color:#ffcf24;
+  font-weight:500;
+}
+
+.blockQuote::before{
+  font-family:Arial;
+  content: "\201C";
+  color:#ffcf24;
+  font-size:4em;
+  position: absolute;
+  left: 10px;
+  top:-10px;
+}
+
+.blockQuote{
+  font-size: 1.4em;
+  width:475px;
+  margin:8px auto 32px auto;
+  font-family:Open Sans;
+  color: #191919;
+  padding:1.2em 30px 1.2em 75px;
+  border-left:8px solid #ffcf24 ;
+  line-height:1.6;
+  position: relative;
+  background:oldlace;
+}
+
+.comment{
+  font-weight: 600;
+  font-family:Open Sans;
+  color: #191919;
+  line-height:1.6;
+  position: relative;
+  background:oldlace;
+}
+
+.smallText{
+  font-size:0.8em;
+  color: #555555;
+}
