@@ -104,11 +104,11 @@ const App = () => {
         wavePortalContract.on("NewMessage", (from, timestamp, message) => {
           console.log("NewMessage", from, timestamp, message);
           setLoading(false);
-          setAllWaves(prevState => [...prevState, {
+          setAllWaves(prevState => [{
             address: from,
             timestamp: new Date(timestamp * 1000),
             message: message
-          }]);
+          },...prevState]);
         });
 
       }
