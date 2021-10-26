@@ -45,14 +45,15 @@
 }
 
 .blockQuote{
-  font-size: 1.4em;
+  font-size: 2em;
+  font-weight:700;
   width:475px;
   margin:8px auto 32px auto;
   font-family:Open Sans;
-  color: #191919;
+  color: #000000;
   padding:1.2em 30px 1.2em 75px;
   border-left:8px solid #ffcf24 ;
-  line-height:1.6;
+  line-height:1.2;
   position: relative;
   background:oldlace;
 }

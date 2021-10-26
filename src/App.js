@@ -94,6 +94,8 @@ const App = () => {
           });
         });
 
+        wavesCleaned.sort((a,b) => a.timestamp < b.timestamp ? 1:-1);
+
         // Store our data in React State
         setAllWaves(wavesCleaned);
 
