@@ -68,6 +68,7 @@ const App = () => {
       console.log("Connected", accounts[0]);
       /*then change the state of currentAccount to be the selected account */
       setCurrentAccount(accounts[0]);
+      getAllWaves();
     } catch (error) {
       console.log(error)
     }
@@ -183,26 +184,31 @@ const handleShowRandomQuote = () => {
           Show me a quote
         </button>
         <p className="blockQuote">{randomQuote}</p>
-        <p className="bio"> Send me your favourate quote to win some Rinkebey Ethers.</p>
-        <input style={{padding:"8px"}} placeholder="message" onChange={ e => setMessage(e.target.value)} />
-        <button className="waveButton" onClick={sendMessage}>
+
+
+        <p className="bio" style={{"margin-bottom":"4px"}}> Share your favourate quote on the Rinkeby Ethereum network and win some Eths.</p>
+        {!currentAccount && (
+        <button className="textButton" onClick={connectWallet}>To do that, connect your Metamask wallet first.</button>
+        )}
+        <input style={{margin:"16px 0 8px 0", padding:"8px"}} placeholder="message" onChange={ e => setMessage(e.target.value)} />
+        <button className="secondaryButton" onClick={sendMessage}>
           Share
         </button>
 
-        {/*
-        * If there is no currentAccount render this button
-        */}
-        {!currentAccount && (
-          <button className="waveButton" onClick={connectWallet}>
-            Connect Wallet
-          </button>
-        )}
-        {loading && <div style={{ backgroundColor: "OldLace", marginTop: "8px", padding: "16px",opacity:"50%" }}> Your message is being packaged into an Ethereum block (usually takes 10s). Take a sip of drink and come back for the magic ~ </div>}
+        {loading && <div style={{ backgroundColor: "OldLace", marginTop: "8px", padding: "16px",opacity:"50%" }} > 
+        <div class="container">
+          <div class="dash uno"></div>
+          <div class="dash dos"></div>
+          <div class="dash tres"></div>
+          <div class="dash cuatro"></div>
+        </div>
+        Your message is being packaged into an Ethereum block (usually takes 10s). Take a sip of drink and come back for the magic ~ </div>}
+
         {allWaves.map((wave, index) => {
           return (
             <div key={index} style={{ backgroundColor: "OldLace", marginTop: "8px", padding: "16px" }}>
               <div className="comment">{wave.message}</div>
-              <div className="smallText">{wave.timestamp.toString()},{wave.address}</div>
+              <div className="smallText">{wave.timestamp.toString()}</div>
               
             </div>)
         })}
