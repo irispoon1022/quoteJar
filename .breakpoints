@@ -1,5 +1,13 @@
 {
   "files": {
+    "src/App.js": [
+      {
+        "id": "eb4aabc0-77b7-4c98-8a3d-1820ecea2c97",
+        "line": 18,
+        "version": 3120,
+        "index": 622
+      }
+    ],
     "src/utils/store.json": [
       {
         "id": "ed9b14e0-7618-4511-9521-4806323e8e6c",
