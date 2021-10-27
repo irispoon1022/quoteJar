@@ -11,5 +11,7 @@ https://the-quote-jar.irispoon1022.repl.co/
 I build this project because I want to learn more about web3 apps. I followed the "Build + deploy your first web3 app on Ethereum with Solidity + Smart Contracts" tutorial of [buildspace](https://buildspace.so/).
 
 ## Techstack
-Frontend: React & React Hook (I use online IDE Replit). The source code can be found here: https://github.com/irispoon1022/the-Quote-Jar
-Backend: Solidity (I use online IDE Remix). The source code can be found here: https://github.com/irispoon1022/quoteJarSmartContract
+### Frontend
+React & React Hook (I use online IDE Replit). The source code can be found here: https://github.com/irispoon1022/quoteJar
+### Backend
+Solidity (I use online IDE Remix). The source code can be found here: https://github.com/irispoon1022/quoteJarSmartContract
