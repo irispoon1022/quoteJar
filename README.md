@@ -1,6 +1,9 @@
 ## Watch demo of the app
 https://youtu.be/6oL7hsEv8MM
 
+https://user-images.githubusercontent.com/35031745/139009901-40b6ed88-7e7f-4566-8173-c23fec9d96be.mp4
+
+
 ## Check out the app
 https://the-quote-jar.irispoon1022.repl.co/
 
